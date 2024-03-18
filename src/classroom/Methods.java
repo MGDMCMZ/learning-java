@@ -3,53 +3,27 @@ package classroom;
 public class Methods {
     public static void main(String[] args) {
 
-        calculateSum(44, 20);
         System.out.println(calculateSum(44, 20));
 
-        //Print Hello World! 10 times;
-        printTextMultipleTimes("Hello World!", 10);
+        int summa = calculateSum(10, 30);
 
-        String[] shoppingList = {"Potatoes, Ham, Apples, Coconut"};
+        // Print Hello World 10 times;
+        printTextMultipleTimes("Hello World", 10);
+        printTextMultipleTimes("My name is Nikita", 5);
 
-        printAllValuesFromStringArray(shoppingList);
+        // Call method printAllValuesFromStringArray
+        // You pass: array with fruits;
 
-        printAllValuesFromStringArray(new String[]{"Salmon, Beef"});
+        String[] fruits = {"Apple", "Banana", "Pear", "Strawberry"};
+        printAllValuesFromStringArray(fruits);
 
         System.out.println(isEven(10));
+        System.out.println(isEven(11));
 
         int[] numbers = {2, 4, 7, 8, 10};
         int arraySum = printSumOfArrayNumbers(numbers);
         System.out.println(arraySum);
 
-
-
-
-    }
-
-    public static int calculateSum(int x, int y){
-        int z = x + y;
-        return z;
-    }
-
-    public static void printTextMultipleTimes(String text, int repeatCount) {
-        for (int i = 0; i < repeatCount; i++) {
-            System.out.println(text);
-        }
-    }
-
-    //Task
-
-    public static void printAllValuesFromStringArray(String[] stringArray) {
-        for (int i = 0; i < stringArray.length; i++) {
-            System.out.println(stringArray[i]);
-        }
-    }
-
-    //Task
-
-    public static boolean isEven(int number) {
-        boolean result = number % 2 == 0;
-        return result;
     }
 
     private static int printSumOfArrayNumbers(int[] numbers) {
@@ -60,15 +34,30 @@ public class Methods {
         return summa;
     }
 
+    public static int calculateSum(int x, int y) {
+        return x + y;
+    }
 
+    public static void printTextMultipleTimes(String text, int repeatCount) {
+        for (int i = 0; i < repeatCount; i++) {
+            System.out.println(text);
+        }
+    }
+
+    // Task: create method that receives String array and print all values
 
     public static void printAllValuesFromStringArray(String[] stringArray) {
         for (int i = 0; i < stringArray.length; i++) {
             System.out.println(stringArray[i]);
         }
+    }
 
+    // Task: Create method that will return true if number is even or false if odd;
 
+    public static boolean isEven(int number) {
+        return number % 2 == 0;
+    }
 
-
+    // Task: Create method that accepts int array and returns sum of number;
 
 }
